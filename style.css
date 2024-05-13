@@ -1,0 +1,122 @@
+
+:root{
+    --altura-header: 80px;
+    --padding-left-rigth: 2rem;
+    --ancho-maximo: 1200px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+li{
+    list-style-type: none;
+}
+
+.nav-1{
+    display: none;
+}
+
+.header{
+    height: var(--altura-header);
+    background-color: #00afb9;
+}
+
+.header1{
+    height: 130px;
+    background-color: #00afb9;
+}
+
+.navbar{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 var(--padding-left-rigth);
+}
+
+.logo{
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+i{
+    color: aliceblue;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+input{
+    display: none;
+}
+
+.ul-liks{
+    width: 100%;
+    background-color: #3c6e71;
+    position: absolute;
+    top: var(--altura-header);
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    /* height: calc(100vh - var(--altura-header)); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    transition: all .5s;
+}
+
+
+
+.links{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+input[type=checkbox]:checked ~ .ul-liks {
+    height: calc(100vh - var(--altura-header));
+ }
+
+
+@media screen and (min-width: 768px){
+    .label-hamburguesa{
+        display: none;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .nav-1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .menu{
+        display: flex;
+        gap: 2rem;
+        font-size: 20px;
+    }
+
+    .logo1{
+        font-size: 40px;
+        color: aliceblue;
+        font-weight: bold;
+    }
+
+
+}
